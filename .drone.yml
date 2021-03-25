@@ -5,7 +5,7 @@ name: default
 
 steps:
   - name: build
-    image: arwineap/docker-ruby-nokogiri-phantomjs
+    image: ruby:2.7.0
     commands:
       - cd rack
       - bundle install

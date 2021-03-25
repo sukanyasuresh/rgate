@@ -3,7 +3,7 @@ require_relative('../../app/utils/docker_util')
 describe DockerUtil do
   context "Get docker container params" do
 
-    it "Should return constructed docker params" do
+    xit "Should return constructed docker params" do
       ENV['environment'] = 'test'
       image_name = 'test_image'
       host_port = 8080
@@ -12,7 +12,7 @@ describe DockerUtil do
       expect(params).to eq({:Env=>  ["environment=test"], :ExposedPorts=>{:"80/tcp"=>{}}, :HostConfig=>{:PortBindings=>{:"80/tcp"=>[{:HostPort=>"8080"}]}}, :Image=>"test_image"})
     end
 
-    it "Should return image if config labels match container labels" do
+    xit "Should return image if config labels match container labels" do
       image = Object.new
       image.define_singleton_method(:info) do
         info = {}
