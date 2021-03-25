@@ -6,9 +6,9 @@ describe "Orders Dockerfile" do
 #     @image = Docker::Image.build_from_dir('./../containers/backend/orders')
 #     @image.tag(repo: 'test/orders', tag: 'test')
 
-    set :os, family: :alpine
-    set :backend, :docker
-    set :docker_image, @image.id
+#     set :os, family: :alpine
+#     set :backend, :docker
+#     set :docker_image, @image.id
   end
 
 
@@ -25,9 +25,9 @@ describe "Payment Dockerfile" do
 #     @image = Docker::Image.build_from_dir('./../containers/backend/payment')
 #     @image.tag(repo: 'test/payment', tag: 'test')
 
-    set :os, family: :alpine
-    set :backend, :docker
-    set :docker_image, @image.id
+#     set :os, family: :alpine
+#     set :backend, :docker
+#     set :docker_image, @image.id
   end
 
   xit "should have the right labels" do
