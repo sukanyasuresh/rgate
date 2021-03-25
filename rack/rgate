@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+
+require 'thor'
+require 'httparty'
+require_relative('services/api_gateway')
+
+class Rgate < Thor
+
+  desc "start", "status server"
+  method_option :config, :default => "config/config.yml", :aliases => "-c",
+                :desc => "which config file to configure rgate."
+
+  method_option :port,:default => "8080", :aliases => "-p",
+                :desc => "which port to run the getway."
+
+
+  def start
+    file_path = options['config']
+    ENV['CONFIG_PATH'] = file_path
+    port  = options['port']
+    puts "Starting the server with params: #{options}"
+    system("bundle exec rackup -p #{port}")
+  end
+
+end
+
+Rgate.start

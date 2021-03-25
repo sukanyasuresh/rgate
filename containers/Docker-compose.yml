@@ -1,0 +1,14 @@
+version: '3'
+services:
+
+  payments:
+    container_name: orders-backend
+    build:
+      context: ./backend/orders
+      dockerfile: Dockerfile
+
+  orders:
+    container_name: payment-backend
+    build:
+      context: ./backend/payment
+      dockerfile: Dockerfile

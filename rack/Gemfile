@@ -1,0 +1,11 @@
+source 'https://rubygems.org'
+
+ruby '2.7.0'
+
+gem 'thor'
+gem 'docker-api'
+gem 'rack'
+gem 'httparty'
+gem 'rspec'
+gem 'webmock'
+gem 'serverspec'

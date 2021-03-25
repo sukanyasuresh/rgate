@@ -1,0 +1,21 @@
+routes:
+
+  - path_prefix: /api/payment
+    backend: payment
+
+  - path_prefix: /api/orders
+    backend: orders
+
+default_response:
+  body: This is not reachable
+  status_code: 403
+
+backends:
+  - name: payment
+    match_labels:
+      app_name: payment
+      environment: development
+  - name: orders
+    match_labels:
+      app_name: orders
+      environment: development

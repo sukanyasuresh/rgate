@@ -1,0 +1,21 @@
+routes:
+
+  - path_prefix: /api/test_path1
+    backend: test1
+
+  - path_prefix: /api/test_path2
+    backend: test2
+
+default_response:
+  body: This is not reachable
+  status_code: 500
+
+backends:
+  - name: test1
+    match_labels:
+      app_name: test1
+      environment: test
+  - name: test2
+    match_labels:
+      app_name: test2
+      environment: test
