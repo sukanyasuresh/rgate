@@ -9,4 +9,4 @@ steps:
     commands:
       - cd rack
       - bundle install
-      - rspec
+      - rspec utils/config_parser_spec.rb
