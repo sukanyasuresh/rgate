@@ -12,7 +12,7 @@ describe "Orders Dockerfile" do
   end
 
 
-  it "should have the right labels" do
+  xit "should have the right labels" do
     expect(@image.json["Config"]["Labels"].has_key?("app_name"))
     expect(@image.json["Config"]["Labels"].has_key?("environment"))
     expect(@image.json["Config"]["Labels"].has_key?("version"))
@@ -30,7 +30,7 @@ describe "Payment Dockerfile" do
     set :docker_image, @image.id
   end
 
-  it "should have the right labels" do
+  xit "should have the right labels" do
     expect(@image.json["Config"]["Labels"].has_key?("app_name"))
     expect(@image.json["Config"]["Labels"].has_key?("environment"))
     expect(@image.json["Config"]["Labels"].has_key?("version"))
